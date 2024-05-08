@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	// getRequest()
+	getRequest()
 	// getRequestWithQueryParam()
 	// headRequest()
 	// postFormData()
@@ -24,7 +24,7 @@ func main() {
 	// postMultipartData()
 	// getRequestWithCookies()
 	// getThroughProxy()
-	getFileThroughProtocol()
+	// getFileThroughProtocol()
 	// deleteRequest()
 }
 func getRequest() {
