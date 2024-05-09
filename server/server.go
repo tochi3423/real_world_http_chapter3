@@ -18,14 +18,16 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 	var httpServer http.Server
+	// パス("/")におけるリクエストに対して、handler関数が呼び出される
 	http.HandleFunc("/", handler)
 	log.Println("start https listening: 18888")
 	httpServer.Addr = ":18888"
+	// httpServer.Addrに指定したアドレスに対してネットワーク接続のリスニング
 	log.Println(httpServer.ListenAndServe())
 }
 
 // func main() {
-//  http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+//  http.HandleFunc("/cookie", func(w http.ResponseWriter, r *http.Request) {
 //      cookie := &http.Cookie{
 //          Name:  "test_cookie",
 //          Value: "hello, world",
